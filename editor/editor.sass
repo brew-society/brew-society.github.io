@@ -1,0 +1,98 @@
+main
+    position: fixed
+    left: 0px
+    right: 0px
+    top: 60px
+    bottom: 0px
+    display: flex
+    flex-direction: row
+    flex-wrap: nowrap
+    justify-content: space-between
+    align-items: stretch
+
+.sidepanel
+    position: relative
+    flex-grow: 1
+    flex-basis: 30%
+    background: #fff
+    border-right: 1px solid #ddd
+    padding: 16px
+    font-family: sans-serif
+
+    h1
+        font-weight: 900
+
+    p
+        font-weight: 100
+        text-align: justify
+
+    code
+        display: inline
+        font-weight: 900
+
+    pre
+        box-sizing: border-box
+        border-radius: 5px
+        width: 100%
+        padding: 24px
+        background: #eee
+        font-weight: 100
+        white-space: pre-wrap
+
+    .run
+        box-sizing: border-box
+        position: absolute
+        left: 0px
+        right: 0px
+        bottom: 0px
+        width: 100%
+        padding: 14px
+        font-size: 18px
+        border: none
+        border-radius: 0px
+        background: #ddd
+
+        &:hover
+            cursor: pointer
+            background: #eee
+
+.editor
+    flex-grow: 1
+    // flex-shrink: 2
+    flex-basis: 70%
+    display: flex
+    flex-direction: column
+    position: relative
+
+    label
+        position: absolute
+        right: 10px
+        top: 10px
+        font-size: 12px
+        text-transform: uppercase
+        font-family: sans-serif
+        color: #bbb
+        font-weight: 900
+
+    .input
+        position: relative
+        flex-grow: 1
+
+        .cm-wrap
+            width: 100%
+            height: 100%
+            margin: 0px
+            border: none
+            resize: none
+            border-bottom: 1px solid #ddd
+
+    .output
+        position: relative
+        flex-grow: 1
+        padding: 24px
+        font-size: 16px
+        font-family: monospace
+
+@media screen and ( max-width: 600px )
+    .sidepanel
+        display: none

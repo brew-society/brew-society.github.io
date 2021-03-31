@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>The Brew Society</title>
+    <link rel="stylesheet" href="../style.sass"/>
+    <link rel="stylesheet" href="./editor.sass"/> 
+</head>
+<body>
+    <include src="./src/header.html"></include>
+    <main>
+        <div class="sidepanel">
+            <h1>Javascript Test</h1>
+            <p>The text editor to my right is running Javascript. Try starting out your Javascript future by typing the below text into the editor, and then hit the run button below. If you do it correctly, this will print "<code>Hello World!</code>" into the console, and you will be on your way to becoming a Javascript Master.</p>
+            <pre>console.log("Hello World!");</pre>
+            <button class="run" id="run">Run</button>
+        </div>
+        <div class="editor">
+            <label>Editor</label>
+            <div id="input" class="input">
+                
+            </div>
+            <div class="output">
+                <label>Console</label>
+                <p id="output"></p>
+            </div> 
+            <script src="editor.ts"></script>
+        </div>
+    </main>
+</body> 
+</html> 

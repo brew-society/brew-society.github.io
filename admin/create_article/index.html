@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Article</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>The Brew Society</title>
+    <link rel="stylesheet" href="../../style.sass"/>
+    <link rel="stylesheet" href="./create_article.sass"/> 
+
+    <!-- Quill -->
+    <link href="https://cdn.quilljs.com/1.2.6/quill.snow.css" rel="stylesheet">
+    <script src="https://cdn.quilljs.com/1.2.6/quill.min.js"></script>
+</head>
+<body>
+    <include src="./src/header.html"></include> 
+    <main>
+        <div class="block">
+            <div class="scaleblock">
+                <h1>Create Article</h1>
+                <label for="title">Article Title</label>
+                <input id="title" type="text">
+                <!-- <h3 for="editor">Article Content</h3> -->
+                <label for="editor">Article Content</label>
+                <div id="editor">
+                    <p>Hello World!</p>
+                    <p>Some initial <strong>bold</strong> text</p>
+                    <p><br></p>
+                </div> 
+                <button class="button">Save</button>
+            </div>
+        </div>
+        <include src="./src/footer.html"></include>
+    </main>
+    <script src="./editor.ts"></script> 
+</body>
+</html>

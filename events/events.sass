@@ -1,0 +1,125 @@
+$linkColor: #1865f2
+
+html, body
+    width: 100%
+    margin: 0px
+    padding: 0px
+    font-family: sans-serif
+
+main
+    position: absolute
+    top: 60px
+    left: 0px
+    right: 0px
+
+.block
+    position: relative
+    width: 100%
+    font-family: sans-serif
+    z-index: 10
+
+.whiteContent
+    color: white
+
+.scaleblock
+    position: relative
+    max-width: 1000px
+    margin: 0px auto
+    padding: 25px
+    z-index: 10
+
+    h1
+        font-size: 32px
+        font-weight: 900
+
+    h3
+        font-size: 16px
+        font-weight: 300
+
+    p
+        font-size: 16px
+        font-weight: 300
+        text-align: justify
+
+.layer2
+    background: #f6f6f6
+    fill: #f6f6f6
+
+.calendar
+    // background: #f6f6f6
+    border: 1px solid #ddd
+    padding: 0px
+    border-radius: 5px
+    border-collapse: collapse
+    overflow: hidden
+
+    article
+        position: relative
+        height: 80px
+        border-top: 1px solid #ddd
+
+        &:first-child
+            border-top: none
+
+        &:hover
+            cursor: pointer
+            background: lighten($linkColor, 45%)
+
+            .date
+                background: $linkColor
+                color: white
+
+        .date
+            position: absolute
+            left: 0px
+            top: 0px
+            width: 80px
+            height: 80px
+            display: flex
+            justify-content: center
+            align-items: center
+            flex-direction: column
+            border: none
+            transition: background 0.2s, color 0.2s
+
+            b
+                font-size: 28px
+                font-weight: 900
+
+            i
+                font-size: 14px
+                font-style: normal
+                font-weight: 100
+
+        .description
+            position: absolute
+            left: 80px
+            top: 0px
+            bottom: 0px
+            right: 0px
+            padding: 0px 15px
+
+.fullInfo
+    box-sizing: border-box
+    width: 100%
+    border: 1px solid #ddd
+    padding: 25px
+    border-radius: 5px
+
+.fullscale
+    position: absolute
+    left: 0px
+    top: 0px
+    bottom: 0px
+    right: 0px
+    width: 100%
+    overflow: hidden
+    display: flex
+    align-content: center
+    justify-content: center
+
+    *
+        width: 100%
+        object-fit: cover
+        filter: brightness(40%)
+        z-index: 5
