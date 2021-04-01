@@ -1,6 +1,6 @@
 var hamburgerToggled = false;
 
-function toggleHamburger() {
+document.getElementById('hamburger').onclick = function () {
 
     if (hamburgerToggled) {
 
