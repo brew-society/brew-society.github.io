@@ -12,6 +12,7 @@
     "push-gh-pages": "push-dir --dir=dist --branch=gh-pages --cleanup --verbose"
   },
   "keywords": [],
-  "author": "", 
+  "author": "William McGonagle", 
   "license": "ISC"
 }
+ 

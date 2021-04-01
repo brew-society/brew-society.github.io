@@ -12,14 +12,14 @@
                                             <h2>
                                                 Teachers
                                             </h2>
-                                            <a href="#">Steve Wozniak</a>
-                                            <a href="#">Elon Musk</a>
-                                            <a href="#">Jeff Bezos</a>
-                                            <a href="#">Satya Nadella</a>
-                                            <a href="#">Bill Gates</a>
-                                            <a href="#">Mark Zuckerberg</a>
-                                            <a href="#">Jack Ma</a>
-                                            <a href="#">Gabe Newell</a>
+                                            <a href="/teacher/">Steve Wozniak</a>
+                                            <a href="/teacher/">Elon Musk</a>
+                                            <a href="/teacher/">Jeff Bezos</a>
+                                            <a href="/teacher/">Satya Nadella</a>
+                                            <a href="/teacher/">Bill Gates</a>
+                                            <a href="/teacher/">Mark Zuckerberg</a>
+                                            <a href="/teacher/">Jack Ma</a>
+                                            <a href="/teacher/">Gabe Newell</a>
                                         </div>
                                     </td>
                                     <td>
@@ -27,13 +27,13 @@
                                             <h2>
                                                 Concepts
                                             </h2>
-                                            <a href="#">Frontend Building</a>
-                                            <a href="#">Webserver Design</a>
-                                            <a href="#">Artificial Intelligence</a>
-                                            <a href="#">Internet of Things</a>
-                                            <a href="#">Algorithm Optimizations</a>
-                                            <a href="#">3D Rendering</a>
-                                            <a href="#">Networking</a>
+                                            <a href="/course/">Frontend Building</a>
+                                            <a href="/course/">Webserver Design</a>
+                                            <a href="/course/">Artificial Intelligence</a>
+                                            <a href="/course/">Internet of Things</a>
+                                            <a href="/course/">Algorithm Optimizations</a>
+                                            <a href="/course/">3D Rendering</a>
+                                            <a href="/course/">Networking</a>
                                         </div>
                                     </td>
                                     <td>
@@ -52,25 +52,27 @@
                                 </table>
                             </div>
                         </a>
-                        <a href="">
+                        <a href="/events/">
                             Events
                         </a>
                     </div>
                 </td>
                 <td>
                     <div class="center">
-                        <svg aria-hidden="true" width="194px" height="28px" viewBox="0 0 194 28">
-                            <text style="pointer-events: none; cursor: default;" fill="#6403E4" font-size="24" font-family="'Gill Sans', sans-serif" font-weight="900" x="0" y="24">&#60;/&#62;</text>
-                            <text style="pointer-events: none; cursor: default;" fill="#111" font-size="20" font-family="'Gill Sans', sans-serif" font-weight="400" x="44" y="22">The Brew Society.</text>
-                            The Brew Society.
-                        </svg>
+                        <a href="/">
+                            <svg aria-hidden="true" width="194px" height="28px" viewBox="0 0 194 28">
+                                <text style="pointer-events: none; cursor: default;" fill="#6403E4" font-size="24" font-family="'Gill Sans', sans-serif" font-weight="900" x="0" y="24">&#60;/&#62;</text>
+                                <text style="pointer-events: none; cursor: default;" fill="#111" font-size="20" font-family="'Gill Sans', sans-serif" font-weight="400" x="44" y="22">The Brew Society.</text>
+                                The Brew Society.
+                            </svg>
+                        </a>
                     </div>
                 </td>
                 <td>
                     <div class="right">
-                        <a href="">About</a>
+                        <a href="/about/">About</a> 
                         <!-- <a href="">Signup</a> -->
-                        <a href="" class="suggested">Log in</a>
+                        <a href="/login/" class="suggested">Log in</a>
                         <a onclick="toggleHamburger()" class="hamburger">
                             <i class="fa fa-bars" aria-hidden="true"></i>
                         </a>
@@ -78,29 +80,13 @@
                 </td>
         </table>
     </div>
-    <script>
-        var hamburgerToggled = false;
-        function toggleHamburger() {
-
-            if (hamburgerToggled) {
-
-                document.getElementById('hamburgerMenu').style.left = '100%';
-
-            } else {
-
-                document.getElementById('hamburgerMenu').style.left = '0%';
-
-            }
-
-            hamburgerToggled = !hamburgerToggled;
-
-        }
-    </script>
+    <script src="/src/header.ts"></script>
     <!-- Hamburger Slide-in -->
     <div id="hamburgerMenu" class="hamburgerMenu" style="left: 100%;">
         <a href="/">Home</a>
-        <a href="/">Courses</a>
-        <a href="/">Events</a>
-        <a href="/">About</a>
+        <a href="/courses/">Courses</a>
+        <a href="/events/">Events</a>
+        <a href="/about/">About</a>
+        <a href="/login/">Login</a>
     </div>
 </header>
