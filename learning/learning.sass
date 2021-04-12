@@ -31,12 +31,44 @@ main
     // height: 140px
     transform: rotateY(180deg) rotateX(180deg)
 
+.listTable
+    padding-top: 40px
+    padding-bottom: 40px
+    width: 100%
+    max-width: 900px
+    margin: 0px auto
+    table-layout: fixed
+
+    td
+        vertical-align: top
+        padding: 25px
+
+    h3
+        font-family: sans-serif
+        font-size: 22px
+
+    a
+        display: block
+        width: 100%
+        padding: 10px
+        font-family: sans-serif
+        color: #1865f2
+        font-weight: 900
+        text-decoration: none
+
+        &:hover
+            text-decoration: underline
+
 .table
     width: 100%
     max-width: 900px
     min-height: 550px
     margin: 0px auto
     table-layout: fixed
+    padding: 25px
+
+    img
+        width: 100%
 
     td
         padding: 35px
@@ -69,3 +101,13 @@ main
             display: block
             width: 100%
             padding: 35px 0px
+
+@media screen and ( max-width: 600px )
+
+    .listTable
+        display: block
+
+        td
+            display: block
+            width: 100%
+            padding: 35px 20px
