@@ -163,6 +163,7 @@ header div table td .suggested:hover {
 .dropdown table td div a {
   display: block;
   height: 0px;
+  line-height: 1;
 }
 .dropdown table td div a:hover {
   text-decoration: underline;

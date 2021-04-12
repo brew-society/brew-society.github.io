@@ -1,0 +1,124 @@
+html, body {
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+
+main {
+  position: absolute;
+  top: 60px;
+  left: 0px;
+  right: 0px;
+}
+
+.block {
+  width: 100%;
+}
+
+.scaleblock {
+  max-width: 1000px;
+  margin: 0px auto;
+  padding: 25px;
+}
+
+.layer2 {
+  background: #f6f6f6;
+  fill: #f6f6f6;
+}
+
+.custom-shape-divider {
+  line-height: 0;
+}
+
+.custom-shape-divider {
+  position: relative;
+  display: block;
+  width: calc(100%);
+  transform: rotateY(180deg) rotateX(180deg);
+}
+
+.listTable {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  width: 100%;
+  max-width: 900px;
+  margin: 0px auto;
+  table-layout: fixed;
+}
+.listTable td {
+  vertical-align: top;
+  padding: 25px;
+}
+.listTable h3 {
+  font-family: sans-serif;
+  font-size: 22px;
+}
+.listTable a {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-family: sans-serif;
+  color: #1865f2;
+  font-weight: 900;
+  text-decoration: none;
+}
+.listTable a:hover {
+  text-decoration: underline;
+}
+
+.table {
+  width: 100%;
+  max-width: 900px;
+  min-height: 550px;
+  margin: 0px auto;
+  table-layout: fixed;
+  padding: 25px;
+}
+.table img {
+  width: 100%;
+}
+.table td {
+  padding: 35px;
+}
+.table h1 {
+  font-family: sans-serif;
+  font-size: 34px;
+  font-weight: 900;
+}
+.table p {
+  font-family: sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+}
+.table a {
+  display: inline-block;
+  padding: 16px 30px;
+  background: #1865f2;
+  font-family: sans-serif;
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 750px) {
+  .table {
+    display: block;
+  }
+  .table td {
+    display: block;
+    width: 100%;
+    padding: 35px 0px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .listTable {
+    display: block;
+  }
+  .listTable td {
+    display: block;
+    width: 100%;
+    padding: 35px 20px;
+  }
+}
+
+/*# sourceMappingURL=/learning.1dc308ea.css.map */
