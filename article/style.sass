@@ -1,97 +1,98 @@
 *
-    font-family: sans-serif
-    box-sizing: border-box
+    // box-sizing: border-box
 
 body
+    margin: 0px
+
+#output
     margin: 0px auto
     max-width: 600px
     counter-reset: h1counter
     padding: 20px
+    padding-bottom: 80px
+    font-family: sans-serif
 
-    &::-webkit-scrollbar
-        display: none
-
-p, li
-    // text-align: justify
-    font-weight: 100
-    line-height: 1.8
-    font-size: 16px
-
-li
-    margin: 26px 0px
-
-ul
+    p, li
+        // text-align: justify
+        font-weight: 100
+        line-height: 1.8
+        font-size: 16px
 
     li
-        list-style: none
+        margin: 26px 0px
+
+    ul
+
+        li
+            list-style: none
+            position: relative
+
+            &::before
+                position: absolute
+                top: 4px
+                left: -40px
+                content: url(arrow.svg)
+                width: 26px
+                height: 26px
+
+    h1
         position: relative
-
-        &::before
-            position: absolute
-            top: 4px
-            left: -40px
-            content: url(arrow.svg)
-            width: 26px
-            height: 26px
-
-h1
-    position: relative
-    height: 64px
-    display: flex
-    // justify-content: center
-    align-items: center
-    // padding: 15px
-    font-weight: 100
-    margin-top: 80px
-
-    &::before
-        content: url(blob.svg)
-        position: absolute
-        left: -80px
-        width: 64px
-        height: 64px
-        transform: rotate(3rad)
-        display: inline-block
-
-    &::after
-        content: counter(h1counter)
-        counter-increment: h1counter
-
-        position: absolute
-        left: -80px
-        width: 64px
         height: 64px
         display: flex
-        font-size: 20px
-        justify-content: center
+        // justify-content: center
         align-items: center
+        // padding: 15px
+        font-weight: 100
+        margin-top: 80px
+
+        &::before
+            content: url(blob.svg)
+            position: absolute
+            left: -80px
+            width: 64px
+            height: 64px
+            transform: rotate(3rad)
+            display: inline-block
+
+        &::after
+            content: counter(h1counter)
+            counter-increment: h1counter
+
+            position: absolute
+            left: -80px
+            width: 64px
+            height: 64px
+            display: flex
+            font-size: 20px
+            justify-content: center
+            align-items: center
+            color: #fff
+            font-weight: 900
+
+    pre
+        position: relative
+        display: block
+        width: 100%
+        padding: 25px
+        background: #1f1f1f
+        border-radius: 10px
         color: #fff
-        font-weight: 900
+        margin: 40px auto
+        max-width: 500px
 
-pre
-    position: relative
-    display: block
-    width: 100%
-    padding: 25px
-    background: #1f1f1f
-    border-radius: 10px
-    color: #fff
-    margin: 40px auto
-    max-width: 500px
+        &::before
+            content: 'Javascript'
+            position: absolute
+            top: 5px
+            right: 10px
+            color: #666
+            font-size: 12px
+            text-transform: uppercase
+            font-weight: 900
 
-    &::before
-        content: 'Javascript'
-        position: absolute
-        top: 5px
-        right: 10px
-        color: #666
-        font-size: 12px
-        text-transform: uppercase
-        font-weight: 900
-
-img
-    display: block
-    max-width: 500px
-    width: 100%
-    margin: 40px auto
-    border-radius: 5px
+    img
+        display: block
+        max-width: 500px
+        width: 100%
+        margin: 40px auto
+        border-radius: 5px
