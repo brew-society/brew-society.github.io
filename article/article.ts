@@ -15,6 +15,6 @@ window.onload = function () {
 
     };
 
-    xhr.send();
+    xhr.send(); 
 
 }; 

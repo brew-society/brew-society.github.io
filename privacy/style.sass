@@ -4,6 +4,23 @@
 body
     margin: 0px
 
+.header
+    margin: 0px auto
+    max-width: 800px
+    padding: 0px 20px
+    padding-top: 140px
+    text-align: center
+
+    h1
+        display: inline-block
+        font-family: sans-serif
+        font-weight: 100
+        font-size: 40px
+        color: #222
+        letter-spacing: 2px
+        text-transform: capitalize
+        border-bottom: 2px solid #222
+
 #output
     margin: 0px auto
     max-width: 600px
@@ -11,6 +28,16 @@ body
     padding: 20px
     padding-bottom: 80px
     font-family: sans-serif
+
+    code
+        font-weight: 100
+        line-height: 1.8
+        font-size: 16px
+        font-family: Courier New, Courier, monospace
+        background: #f5f5f5
+        padding: 4px 10px
+        border-radius: 5px
+        // border: 1px solid #ddd
 
     p, li
         // text-align: justify
@@ -31,7 +58,7 @@ body
                 position: absolute
                 top: 4px
                 left: -40px
-                content: url(arrow.svg)
+                content: url(./arrow.svg)
                 width: 26px
                 height: 26px
 
@@ -46,7 +73,7 @@ body
         margin-top: 80px
 
         &::before
-            content: url(blob.svg)
+            content: url(./blob.svg)
             position: absolute
             left: -80px
             width: 64px
