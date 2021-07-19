@@ -28,6 +28,7 @@ main
         font-size: 16px
         font-weight: 300
         text-align: justify
+        line-height: 1.6
 
 .whiteContent
     color: white
@@ -65,11 +66,14 @@ main
     justify-items: center
     row-gap: 35px
     column-gap: 25px
-    border-left: 5px solid #ddd
+    // border-left: 5px solid #ddd
     // border-radius: 5px
     max-width: 700px
     padding: 0px 25px
     margin: 0px auto
+
+    a
+        text-decoration: none
 
     article
         position: relative
@@ -95,15 +99,15 @@ main
             width: 100%
             margin: 0px
 
-        i
-            position: absolute
-            display: block
-            left: -55px
-            border-radius: 50%
-            height: 24px
-            width: 24px
-            border: 5px solid #ddd
-            background: #f6f6f6
+        // i
+        //     position: absolute
+        //     display: block
+        //     left: -55px
+        //     border-radius: 50%
+        //     height: 24px
+        //     width: 24px
+        //     border: 5px solid #ddd
+        //     background: #f6f6f6
 
         &:hover
             border-top: 5px solid $linkColor
@@ -114,8 +118,10 @@ main
             color: #222
 
         p
-            font-weight: 500
+            font-weight: 300
             color: #666
+            line-height: 1.6
+            text-align: left
 
         ul
             position: absolute
