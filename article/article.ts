@@ -10,11 +10,40 @@ window.onload = function () {
     xhr.open("GET", "https://brew-society.herokuapp.com/article/" + q);
 
     xhr.onreadystatechange = function () {
-         
-        document.getElementById("output").innerHTML = JSON.parse(this.responseText).body;
+        
+        if (xhr.readyState !== 4) return;
+
+        var response = JSON.parse(this.responseText);
+
+        console.log(response);
+
+        document.getElementById("output").innerHTML = response.body;
+        document.getElementById("title").innerHTML = response.title;
+        document.getElementById("short").innerHTML = response.course.title || "";
+        
+        var container = document.getElementById('linkContainer');
+
+        response.articles.forEach(element => {
+            
+            appendLink(element, container);
+
+        });
 
     };
 
     xhr.send(); 
 
 }; 
+
+function appendLink(data, container) {
+
+    // <a href="/article/index.html?q=6">Intro to Functions</a>
+
+    var link = document.createElement("A");
+
+    link.innerHTML = data.title;
+    link.setAttribute('href', '/article/?q=' + data.id);
+
+    container.append(link);
+
+}
