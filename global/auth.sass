@@ -4,7 +4,7 @@ main
     position: fixed
     left: 0px
     right: 0px
-    top: 0px
+    top: 60px
     bottom: 0px
     z-index: 95
     display: flex
@@ -30,22 +30,25 @@ main
         // text-align: justify
         font-weight: 300
         color: #444
+        line-height: 1.6
 
     section
         position: relative
+        max-width: 500px
+        margin: 0px auto
 
         label
             display: inline-block
             width: 100%
             margin-top: 18px
+            margin-bottom: 4px
             font-size: 18px
             font-weight: 300
             color: #777
 
         input
             display: inline-block
-            // width: 100%
-            width: calc(415px)
+            width: calc(100% - 30px)
             padding: 15px
             border-radius: 5px
             border: 1px solid #ddd
@@ -62,8 +65,8 @@ main
                 cursor: pointer
                 color: #444
 
-    div
-        width: 450px
+    .box
+        max-width: 450px
         // height: 500px
         padding: 25px
         background: #fff
@@ -83,21 +86,31 @@ main
         font-weight: 900
         transition: transform 0.2s
         margin-top: 26px
-        border: 5px solid $linkColor
+        border: 2px solid $linkColor
         box-sizing: border-box
         background: $linkColor
         color: white
+        transition: background 0.2s, color 0.2s
 
         &:hover
             cursor: pointer
-            border: 5px solid $linkColor
             background: white
             color: $linkColor
-            // border: 10px solid $linkColor
-            // padding: 17px
-            // font-weight: 900
-            // transform: scaleX(1.1) scaleY(0.95)
 
-        &:active
-            // transform: scaleX(0.9) scaleY(1.1)
-            // border-bottom: 100px solid $linkColor
+@media only screen and (max-width: 600px), (max-height: 630px)
+    header
+        display: none
+
+    main
+
+        .box
+            position: fixed
+            left: 0px
+            right: 0px
+            top: 0px
+            bottom: 0px
+            border: none
+            border-radius: 0px
+            z-index: 999
+            max-width: none
+            overflow-y: scroll
