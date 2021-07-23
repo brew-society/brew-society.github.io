@@ -19,7 +19,8 @@ window.onload = function () {
 
         document.getElementById("output").innerHTML = response.body;
         document.getElementById("title").innerHTML = response.title;
-        document.getElementById("short").innerHTML = response.course.title || "";
+        document.getElementById("course").innerHTML = response.course.title || "";
+        document.getElementById("course").setAttribute('href', `/course/?q=${response.course.id || ""}`);
         
         var container = document.getElementById('linkContainer');
 
