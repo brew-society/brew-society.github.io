@@ -1,0 +1,94 @@
+$linkColor: #1865f2
+
+html, body
+    width: 100%
+    margin: 0px
+    padding: 0px
+
+main
+    position: absolute
+    top: 60px
+    left: 0px
+    right: 0px
+
+.block
+    position: relative
+    width: 100%
+    font-family: sans-serif
+
+    h1
+        margin-top: 80px
+        font-size: 32px
+        font-weight: 900
+
+    h3
+        font-size: 16px
+        font-weight: 300
+
+    p
+        font-size: 16px
+        font-weight: 300
+        text-align: justify
+        line-height: 1.6
+
+.whiteContent
+    color: white
+
+.scaleblock
+    position: relative
+    max-width: 1000px
+    margin: 0px auto
+    padding: 25px
+
+.fullscale
+    position: absolute
+    left: 0px
+    top: 0px
+    bottom: 0px
+    right: 0px
+    width: 100%
+    overflow: hidden
+    display: flex
+    align-content: center
+    justify-content: center
+
+    *
+        width: 100%
+        object-fit: cover
+        filter: brightness(40%)
+
+article
+    border: 1px solid #f5f5f5
+    border-radius: 5px
+    max-width: 1000px
+    margin: 25px auto
+    padding: 0px
+
+    .scaleblock
+
+        h2
+            font-size: 28px
+            font-weight: 400
+            margin-bottom: 10px
+
+        h3
+            margin-top: 0px
+            font-size: 18px
+            font-weight: 400
+
+@media screen and ( max-width: 600px )
+    .courses
+        grid-template-columns: 1fr
+
+    .table
+        display: block
+
+        td
+            display: block
+            width: 100%
+            padding: 0px
+
+            figure
+                width: 80%
+                padding: 0px
+                marign: 0px auto
