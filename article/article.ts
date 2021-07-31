@@ -17,6 +17,8 @@ window.onload = function () {
 
         console.log(response);
 
+        document.title = `${response.title} | The Brew Society`;
+
         document.getElementById("output").innerHTML = response.body;
         document.getElementById("title").innerHTML = response.title;
         document.getElementById("course").innerHTML = response.course.title || "";

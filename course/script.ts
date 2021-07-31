@@ -77,7 +77,8 @@ function loadBasicData(id) {
 
         var response = JSON.parse(this.responseText);
 
-        // console.log(this.responseText);
+        document.title = `${response.title} | The Brew Society`;
+
         document.getElementById("title").innerHTML = response.title;
         document.getElementById("short").innerHTML = response.short;
         document.getElementById("body").innerHTML = response.description;
