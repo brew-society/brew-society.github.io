@@ -4,11 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "parcel serve ./index.html ./about/index.html ./blog/index.html ./auth/signup/index.html ./auth/login/index.html ./article/index.html ./course/index.html ./events/index.html ./learn/index.html ./login.html ./privacy/index.html ./teacher/index.html --no-cache --out-dir docs",
+    "start": "parcel serve ./index.html ./about/index.html ./donate/index.html ./blog/index.html ./auth/signup/index.html ./auth/login/index.html ./article/index.html ./course/index.html ./events/index.html ./learn/index.html ./login.html ./copyright/index.html ./privacy/index.html ./teacher/index.html --no-cache --out-dir docs",
     "prebuild-dev": "shx rm -rf dist/*",
     "build-dev": "parcel build ./src/index.html --no-minify --public-url ./",
     "prebuild": "rm -rf docs/*",
-    "build": "parcel build ./index.html ./sitemap.xml ./robots.txt ./google84ce3d569d727105.html ./blog/index.html ./about/index.html ./auth/signup/index.html ./auth/login/index.html ./article/index.html ./course/index.html ./learn/index.html ./login.html ./privacy/index.html ./teacher/index.html --no-cache --out-dir docs",
+    "build": "parcel build ./index.html ./sitemap.xml ./robots.txt ./google84ce3d569d727105.html ./donate/index.html ./blog/index.html ./about/index.html ./auth/signup/index.html ./auth/login/index.html ./article/index.html ./course/index.html ./learn/index.html ./login.html ./copyright/index.html ./privacy/index.html ./teacher/index.html --no-cache --out-dir docs",
     "push-gh-pages": "mv ./dist/error/404/index.html ./dist/404.html; push-dir --dir=dist --branch=gh-pages --cleanup --verbose"
   },
   "keywords": [],
