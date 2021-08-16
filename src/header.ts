@@ -2,7 +2,8 @@ var hamburgerToggled = false;
 
 window.addEventListener('load', function () {
  
-    var container = document.getElementById('concepts');
+    var courseContainer = document.getElementById('concepts');
+    var teacherContainer = document.getElementById('teachers');
 
     let xhr = new XMLHttpRequest();
 
@@ -14,11 +15,18 @@ window.addEventListener('load', function () {
 
         var response = JSON.parse(this.responseText);
 
-        console.log(response);
+        var courses = response.courses;
+        var teachers = response.teachers;
 
-        for (var i = 0; i < response.length; i++) {
+        for (var i = 0; i < courses.length; i++) {
 
-            appendCourse(response[i], container);
+            appendCourse(courses[i], courseContainer, "course");
+
+        }
+
+        for (var i = 0; i < teachers.length; i++) {
+
+            appendCourse(teachers[i], teacherContainer, "teacher");
 
         }
 
@@ -44,14 +52,14 @@ document.getElementById('hamburger').onclick = function () {
 
 }
 
-function appendCourse(data, container) {
+function appendCourse(data, container, endpoint) {
 
     //   <a href="/course/">Frontend Building</a>
 
     var link = document.createElement("A");
 
-    link.innerHTML = data.title;
-    link.setAttribute('href', '/course/?q=' + data.id);
+    link.innerHTML = data.title || data.name;
+    link.setAttribute('href', `/${endpoint}/?q=${data.id}`);
 
     container.append(link);
 
