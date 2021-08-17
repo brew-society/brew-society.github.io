@@ -1,6 +1,9 @@
+var hamburgerToggled = false;
+
 window.addEventListener('load', function () {
  
-    var container = document.getElementById('learn_concepts');
+    var courseContainer = document.getElementById('learn_concepts');
+    var teacherContainer = document.getElementById('learn_teachers');
 
     let xhr = new XMLHttpRequest();
 
@@ -12,11 +15,18 @@ window.addEventListener('load', function () {
 
         var response = JSON.parse(this.responseText);
 
-        console.log(response);
+        var courses = response.courses;
+        var teachers = response.teachers;
 
-        for (var i = 0; i < response.length; i++) {
+        for (var i = 0; i < courses.length; i++) {
 
-            appendCourse(response[i], container);
+            appendCourse(courses[i], courseContainer, "course");
+
+        }
+
+        for (var i = 0; i < teachers.length; i++) {
+
+            appendCourse(teachers[i], teacherContainer, "teacher");
 
         }
 
@@ -26,14 +36,30 @@ window.addEventListener('load', function () {
 
 });
 
-function appendCourse(data, container) {
+document.getElementById('hamburger').onclick = function () {
+
+    if (hamburgerToggled) {
+
+        document.getElementById('hamburgerMenu').style.left = '100%';
+
+    } else {
+
+        document.getElementById('hamburgerMenu').style.left = '0%';
+
+    }
+
+    hamburgerToggled = !hamburgerToggled;
+
+}
+
+function appendCourse(data, container, endpoint) {
 
     //   <a href="/course/">Frontend Building</a>
 
     var link = document.createElement("A");
 
-    link.innerHTML = data.title;
-    link.setAttribute('href', '/course/?q=' + data.id);
+    link.innerHTML = data.title || data.name;
+    link.setAttribute('href', `/${endpoint}/?q=${data.id}`);
 
     container.append(link);
 
