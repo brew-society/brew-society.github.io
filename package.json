@@ -13,5 +13,8 @@
   },
   "keywords": [],
   "author": "William McGonagle",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "posthtml-include": "^1.7.2"
+  }
 }
